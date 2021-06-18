@@ -1,0 +1,6 @@
+<input [(ngModel)]="text">
+<button class="btn btn-primary" (click)="deleteText()">Delete</button>
+<button (click)="randomColor()">Color</button>
+<p [ngStyle]="{'color': boja}">
+   {{text}}
+</p>

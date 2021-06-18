@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-md-5">
+        <h2>Restaurant Smart</h2>
+        <ul class="list-group">
+            <li [ngClass]="{active: dish == selectedDish}" (click)="setSelectedDish(dish)" *ngFor="let dish of dishes" class="list-group-item">
+                {{dish.name}} - {{dish.type}}
+            </li>
+          </ul>
+    </div>
+    <div class="col-md-7">
+        <app-dish-item [dish]="selectedDish"></app-dish-item> 
+    </div>
+</div>

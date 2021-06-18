@@ -1,0 +1,44 @@
+
+<br>
+
+
+<div class="row">
+    <div class="col-6">
+        <div class="rowic">
+        <ul>
+            <input type="text" #searchBox>
+            <br>
+            <br>
+        <button (click)="search()">Pretrazi</button>
+        <br>
+        <br>
+        <h2>LISTA TAKMICENJA</h2>
+            <li *ngFor="let q of questions" [routerLink]="['/takmicenjalist/' + q.id]">
+                {{q.question}},
+                {{q.mesto}},
+                {{q.datum}}
+            </li>
+        </ul>
+        </div>
+        <br>
+        
+    </div>
+    <div class="col-6">
+        <h2>Dodajte novo takmicenje</h2>
+        <br>
+        <label for="text1">Naziv</label>
+        <br>
+        <input type="text1" [(ngModel)]="newQuestion"/>
+        <br>
+        <label for="text2">Mesto</label>
+        <br>
+        <input type="text2" [(ngModel)]="mestoTakmicenja"/>
+        <br>
+        <label for="text3">Datum</label>
+        <br>
+        <input type="text3" [(ngModel)]="datumTakmicenja"/>
+        <br>
+        <br>
+        <button (click)="addQuestion()">Dodaj</button>
+    </div>
+</div>

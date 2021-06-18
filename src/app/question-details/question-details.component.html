@@ -1,0 +1,25 @@
+<br>
+
+
+<br>
+
+
+<br>
+
+<p> ID je: {{question?.id}}</p>
+<p> Mesto odrzavanja: {{question.mesto}}</p>
+<p> Datum: {{question.datum}}</p>
+<br>
+<h2>Izvrsite izmene</h2>
+<br>
+<input type="text" [(ngModel)]="q">
+<br>
+<br>
+<input type="text2" [(ngModel)]="question.mesto">
+<br>
+<br>
+<input type="text2" [(ngModel)]="question.datum">
+<br>
+<br>
+<button (click)="edit()">Sacuvaj</button>
+<button (click)="delete()">Obrisi</button>
